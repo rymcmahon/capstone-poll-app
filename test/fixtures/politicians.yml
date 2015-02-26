@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  first_name: MyString
+  last_name: MyString
+  chamber: MyString
+  state: MyString
+  votes_with_party_pct: MyString
+  missed_votes_pct: MyString
+  bills_sponsored: MyString
+  bills_cosponsored: MyString
+  war_chest: MyString
+
+two:
+  first_name: MyString
+  last_name: MyString
+  chamber: MyString
+  state: MyString
+  votes_with_party_pct: MyString
+  missed_votes_pct: MyString
+  bills_sponsored: MyString
+  bills_cosponsored: MyString
+  war_chest: MyString

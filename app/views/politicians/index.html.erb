@@ -4,19 +4,25 @@
 			<th>Rank</th>
 			<th>Name</th>
 			<th>Party</th>
-			<th>Trend</th>
+			<th>Votes With Party Percentage</th>
+			<th>Votes Missed Percentage</th>
+			<th>War Chest</th>
+			<th>Bills Sponsored</th>
+			<th>Bills Cosponsored</th>
+			<th>Rank Trend</th>
 		</tr>
 	</thead>
 		<tr>
+		<% @politicians.each do |politician| %>
 			<td>1</td>
-			<td>Jack Jones</td>
-			<td>Republican</td>
+			<td><%= politician.first_name %> <%= politician.last_name %></td>
+			<td><%= politician.party_id %></td>
+			<td><%= politician.votes_with_party_pct %></td>
+			<td><%= politician.missed_votes_pct %></td>
+			<td><%= politician.war_chest %></td>
+			<td><%= politician.bills_sponsored %></td>
+			<td><%= politician.bills_cosponsored %></td>
 			<td>+3</td>
 		</tr>
-		<tr>
-			<td>2</td>
-			<td>Sue Flaaco</td>
-			<td>Democrat</td>
-			<td>-1</td>
-		</tr>
+		<% end %>
 </table>

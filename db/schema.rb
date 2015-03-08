@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150303031101) do
+ActiveRecord::Schema.define(version: 20150308200846) do
 
   create_table "parties", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20150303031101) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "party_id",             limit: 255
+    t.string   "bio_guide",            limit: 255
   end
 
 end

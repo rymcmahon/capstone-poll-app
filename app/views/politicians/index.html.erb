@@ -13,10 +13,10 @@
 		</tr>
 	</thead>
 		<tr>
-		<% @politicians.each do |politician| %>
-			<td>1</td>
+		<% @politicians.each_with_index do |politician, index| %>
+			<td><%= index + 1 %></td>
 			<td><img src="http://theunitedstates.io/images/congress/225x275/<%= politician.bio_guide %>.jpg" width="78.75px" height="96.25px" style="border-radius: 50%;"> <%= politician.first_name %> <%= politician.last_name %></td>
-			<td><%= politician.party.name %></td>
+			<td><img src="<%= politician.party.name %>" width="90"></td>
 			<td><%= politician.votes_with_party_pct %></td>
 			<td><%= politician.missed_votes_pct %></td>
 			<td><%= number_to_currency(politician.war_chest) %></td>

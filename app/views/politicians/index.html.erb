@@ -10,6 +10,7 @@
 			<th>Bills Sponsored</th>
 			<th>Bills Cosponsored</th>
 			<th>Rank Trend</th>
+			<th>Show Page</th>
 		</tr>
 	</thead>
 		<tr>
@@ -23,6 +24,7 @@
 			<td><%= politician.bills_sponsored %></td>
 			<td><%= politician.bills_cosponsored %></td>
 			<td>+3</td>
+			<td><a class="btn btn-default" href="/politicians/ <%= politician.id %>" role="button">Show</a></td>
 		</tr>
 		<% end %>
 </table>

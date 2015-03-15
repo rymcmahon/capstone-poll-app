@@ -1,5 +1,5 @@
 class PoliticiansController < ApplicationController
-	layout 'spacelab'
+
 	def index
 		@politicians = Politician.all
 		@parties = Party.all

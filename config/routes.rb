@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
- 
- get '/' => 'politicians#index'
+ devise_for :users
+
+ root 'politicians#index'
  get '/politicians/new' => 'politicians#new'
  get '/politicians/:id' => 'politicians#show'
  post '/politicians' => 'politicians#create'

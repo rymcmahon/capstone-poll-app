@@ -12,7 +12,6 @@
 			<th>Name</th>
 			<th>Votes With Party</th>
 			<th>Votes Missed</th>
-			<th>War Chest</th>
 			<th>Bills Sponsored</th>
 			<th>Bills Cosponsored</th>
 			<th>Rank Trend</th>
@@ -22,10 +21,9 @@
 		<tr>
 		<% @politicians.each_with_index do |politician, index| %>
 			<td><%= index + 1 %></td>
-			<td><img src="http://theunitedstates.io/images/congress/225x275/<%= politician.bio_guide %>.jpg" width="78.75px" height="96.25px" style="border-radius: 50%;"> <%= politician.first_name %> <%= politician.last_name %> <%= politician.party.name %></td>
+			<td><img src="http://theunitedstates.io/images/congress/225x275/<%= politician.bio_guide %>.jpg" width="78.75px" height="96.25px" style="border-radius: 50%;"> <%= politician.first_name %> <%= politician.last_name %> (<%= politician.party.name %>)</td>
 			<td><%= number_to_percentage(politician.votes_with_party_pct, precision: 2) %></td>
 			<td><%= number_to_percentage(politician.missed_votes_pct, precision: 2) %></td>
-			<td><%= number_to_currency(politician.war_chest, precision: 0) %></td>
 			<td><%= politician.bills_sponsored %></td>
 			<td><%= politician.bills_cosponsored %></td>
 			<td>+3</td>

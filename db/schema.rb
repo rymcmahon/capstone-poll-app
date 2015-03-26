@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150320013110) do
+ActiveRecord::Schema.define(version: 20150325020344) do
 
   create_table "parties", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20150320013110) do
     t.integer  "war_chest",            limit: 4
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "party_id",             limit: 255
+    t.integer  "party_id",             limit: 4
     t.string   "bio_guide",            limit: 255
     t.decimal  "dw_nominate",                      precision: 5, scale: 3
   end

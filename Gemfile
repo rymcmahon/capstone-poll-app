@@ -29,7 +29,8 @@ gem 'unirest'
 # gem 'bcrypt', '~> 3.1.7'
 # devise gem
 gem 'devise'
-
+# Lazy High Charts
+gem 'lazy_high_charts'
 # Use Unicorn as the app server
 # gem 'unicorn'
 

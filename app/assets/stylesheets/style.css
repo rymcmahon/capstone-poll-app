@@ -1,3 +1,12 @@
 .navbar-brand h3 {
 	margin-top: 0;
 }
+
+#show-header h1 {
+	display: inline-block;
+	margin-left: 20px;
+}
+
+.table > tbody > tr > td {
+	vertical-align: middle !important;
+}

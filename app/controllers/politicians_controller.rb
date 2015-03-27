@@ -10,6 +10,7 @@ class PoliticiansController < ApplicationController
 		@first_name = params[:first_name]
 		@last_name = params[:last_name]
 		@state = params[:state]
+		@parties = Party.all
 
 		@chart = LazyHighCharts::HighChart.new('graph') do |f|
 		  f.title(:text => "Top Campaign Donors")

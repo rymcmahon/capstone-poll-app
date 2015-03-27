@@ -2,11 +2,19 @@
 	margin-top: 0;
 }
 
-#show-header h1 {
+#name-header {
 	display: inline-block;
-	margin-left: 20px;
 }
 
+#name-header h1 {
+	display: inline-block;
+	margin: 0 0 0 20px;
+}
+
+#name-header h2 {
+	display: block;
+	margin: 0 0 0 20px;
+}
 .table > tbody > tr > td {
 	vertical-align: middle !important;
 }

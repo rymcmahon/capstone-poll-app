@@ -1,3 +1,12 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+.theme-showcase {
+	margin-bottom: 120px;
+}
+
 .navbar-brand h3 {
 	margin-top: 0;
 }
@@ -11,10 +20,33 @@
 	margin: 0 0 0 20px;
 }
 
-#name-header h2 {
+#name-header h3 {
 	display: block;
 	margin: 0 0 0 20px;
 }
 .table > tbody > tr > td {
 	vertical-align: middle !important;
 }
+
+footer p {
+	color: #ffffff !important;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background-color: #345578;
+	color: #ffffff;
+	margin-top: 20px;
+}
+
+#social-wrapper {
+	text-align: center;
+}
+
+#social-wrapper img {
+	padding: 0 10px 0 10px;
+}
+

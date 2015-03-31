@@ -3,6 +3,7 @@ class PoliticiansController < ApplicationController
 	def index
 		@politicians = Politician.all.sort_by { |politician| -politician.score }
 		@parties = Party.all
+		@date = Time.now()
 	end
 
 	def show

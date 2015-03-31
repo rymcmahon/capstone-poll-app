@@ -2,7 +2,7 @@ class Politician < ActiveRecord::Base
 	belongs_to :party
 
 	def score
-		return votes_with_party_pct_score #+
+		return votes_with_party_pct_score + missed_votes_pct_score
 	end
 
 	private
@@ -32,6 +32,35 @@ class Politician < ActiveRecord::Base
 		elsif votes_with_party_pct < 61
 			total_score += 10
 		end
-		return total_score
+			return total_score
 	end
+
+	def missed_votes_pct_score
+			total_score = 0
+		if missed_votes_pct <= 1
+			total_score += 10
+		elsif missed_votes_pct > 1 && missed_votes_pct <= 2
+			total_score += 9
+		elsif missed_votes_pct > 2 && missed_votes_pct <= 3
+			total_score += 8
+		elsif missed_votes_pct > 3 && missed_votes_pct <= 4
+			total_score += 7
+		elsif missed_votes_pct > 4 && missed_votes_pct <= 5
+			total_score += 6
+		elsif missed_votes_pct > 5 && missed_votes_pct <= 6
+			total_score += 5
+		elsif missed_votes_pct > 6 && missed_votes_pct <= 7
+			total_score += 4
+		elsif missed_votes_pct > 7 && missed_votes_pct <= 8
+			total_score += 3
+		elsif missed_votes_pct > 8 && missed_votes_pct <= 9
+			total_score += 1
+		elsif missed_votes_pct > 9 && missed_votes_pct <= 10
+			total_score += 1
+		elsif missed_votes_pct > 10
+			total_score += 0
+		end
+			return total_score
+	end
+
 end

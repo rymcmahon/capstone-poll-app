@@ -2,8 +2,6 @@ class PoliticiansController < ApplicationController
 
 	def index
 		@politicians = Politician.all.sort_by { |politician| -politician.score }
-		p "SCORE:::"
-		p @politicians.map(&:score)
 		@parties = Party.all
 	end
 

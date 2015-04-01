@@ -63,4 +63,10 @@ class Politician < ActiveRecord::Base
 			return total_score
 	end
 
+	def dw_nominate_score
+			total_score = 0
+		if party_id == 1 && dw_nominate <= 1 && dw_nominate >= -0.95
+			total_score += 10 
+
+	end
 end

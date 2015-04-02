@@ -55,6 +55,13 @@ footer p {
 	text-align: center;
 	margin: 100px 0 30px 0;
 }
+
 .table > tbody > tr > td {
 	vertical-align: middle !important;
+}
+
+#pol-score {
+	font-size: 24px;
+	font-weight: 700;
+	color: #D90603;
 }

@@ -8,5 +8,4 @@ Rails.application.routes.draw do
 	 get '/politicians/:id/edit' => 'politicians#edit'
 	 patch '/politicians/:id' => 'politicians#update'
 	 delete '/politicians/:id' =>'politicians#destroy'
- 
 end

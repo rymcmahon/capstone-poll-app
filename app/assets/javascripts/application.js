@@ -13,6 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require highcharts/highcharts                                                           
-//= require highcharts/highcharts-more                                                         
-//= require turbolinks
+//= require highcharts/highcharts-more 
+//= require angular                                                
+//= require app
+//= require_tree .        
 

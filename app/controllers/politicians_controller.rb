@@ -1,9 +1,11 @@
 class PoliticiansController < ApplicationController
+		# respond_to :json, :xml
 
 	def index
 		@politicians = Politician.all.sort_by { |politician| -politician.score }
 		@parties = Party.all
 		@date = Time.now()
+		# respond_with(@politicians)
 	end
 
 	def show
@@ -13,6 +15,7 @@ class PoliticiansController < ApplicationController
 		@state = params[:state]
 		@parties = Party.all
 		@politicians = Politician.all
+		# respond_with(@politician)
 
 		@chart = LazyHighCharts::HighChart.new('graph') do |f|
 		  f.title(:text => "Top Campaign Donors")

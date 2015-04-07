@@ -5,33 +5,33 @@
   <p><a class="btn btn-primary btn-lg">Latest Rankings &raquo;</a></p>
 </div> <!-- end jumbotron  -->
 <h2 id="pol-title"><em>Power Pol</em> Rankings for <%= @date.strftime("%A %B %e, %Y")%></h2>
-<div ng-controller="politiciansCtrl">
+<div ng-controller="politiciansCtrl" ng-init="fetchData()">
 	<table class="table table-hover">
 		<thead>
 			<tr>
 				<th>Rank</th>
 				<th>Name</th>
-				<th>Power Pol Score</th>
-				<th>Votes With Party</th>
-				<th>DW Nominate</th>
-				<th>Votes Missed</th>
-				<th>Bills Sponsored</th>
-				<th>Bills Cosponsored</th>
+				<th ng-click="changeOrder('score')" class="cursor-pointer"><a>Power Pol Score</a></th>
+				<th ng-click="changeOrder('votes_with_party_pct')" class="cursor-pointer"><a>Votes With Party</a></th>
+				<th ng-click="changeOrder('dw_nominate')" class="cursor-pointer"><a>DW Nominate</a></th>
+				<th ng-click="changeOrder('missed_votes_pct')" class="cursor-pointer"><a>Votes Missed</a></th>
+				<th ng-click="changeOrder('bills_sponsored')" class="cursor-pointer"><a>Bills Sponsored</a></th>
+				<th ng-click="changeOrder('bills_cosponsored')" class="cursor-pointer"><a>Bills Cosponsored</a></th>
 			</tr>
 		</thead>
-					<% @politicians.each_with_index do |politician, index| %>
-					<tr ng-click="goTo(<%=politician.id%>)">
-						<td><%= index + 1 %></td>
-						<td><img src="http://theunitedstates.io/images/congress/225x275/<%= politician.bio_guide %>.jpg" width="78.75px" height="96.25px" style="border-radius: 50%;"> <%= politician.first_name %> <%= politician.last_name %> (<%= politician.party.name %>) <%= politician.state %></td>
-						<td id="pol-score"><%= politician.score %></td>
-						<td><%= number_to_percentage(politician.votes_with_party_pct, precision: 2) %></td>
-						<td><%= number_with_precision(politician.dw_nominate, precision: 3) %></td>
-						<td><%= number_to_percentage(politician.missed_votes_pct, precision: 2) %></td>
-						<td><%= politician.bills_sponsored %></td>
-						<td><%= politician.bills_cosponsored %></td>
+					
+					<tr ng-repeat="politician in politicians | orderBy: orderByAttribute:descending" ng-click="goTo(politician.id)" class="cursor-pointer">
+						<td> {{ $index + 1 }}</td>
+						<td><img src="http://theunitedstates.io/images/congress/225x275/{{politician.bio_guide}}.jpg" width="78.75px" height="96.25px" style="border-radius: 50%;"> {{ politician.first_name }} {{ politician.last_name }} ({{ politician.party }}) {{ politician.state }}</td>
+						<td id="pol-score">{{ politician.score }}</td>
+						<td>{{ politician.votes_with_party_pct }}%</td>
+						<td>{{ politician.dw_nominate }} </td>
+						<td>{{ politician.missed_votes_pct }}%</td>
+						<td>{{ politician.bills_sponsored }}</td>
+						<td>{{ politician.bills_cosponsored }}</td>
 					</tr>
 			
-			<% end %>
+
 	</table>
 
 </div>

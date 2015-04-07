@@ -60,6 +60,10 @@ footer p {
 	vertical-align: middle !important;
 }
 
+.cursor-pointer {
+	cursor: pointer;
+}
+
 #pol-score {
 	font-size: 24px;
 	font-weight: 700;

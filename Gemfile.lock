@@ -203,6 +203,7 @@ DEPENDENCIES
   lazy_high_charts
   mysql2
   rails (= 4.2.0)
+  responders (~> 2.0)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   therubyracer

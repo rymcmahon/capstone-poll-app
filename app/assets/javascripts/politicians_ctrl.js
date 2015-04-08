@@ -10,6 +10,18 @@
 			location.href = '/politicians/' + politicianId;
 		};
 
+		$scope.goToByName = function (politicianName){
+			console.log(politicianName);
+			for(var i = 0; i < $scope.politicians.length; i++){
+				var politician = $scope.politicians[i];
+
+				if(politician["last_name"] === politicianName){
+					location.href = '/politicians/' + politician["id"];
+				}
+			}
+			// location.href = '/politicians/' + politicianId;
+		};
+
 		$scope.fetchData = function() {
       $http.get("/politicians.json").then(function(response) {
         $scope.politicians = response.data;

@@ -64,11 +64,15 @@ footer p {
 	cursor: pointer;
 }
 
+.pol-header {
+	color: #3399F3;
+}
+
 #pol-score {
 	font-size: 24px;
 	font-weight: 700;
 	color: #D90603;
-}
+} 
 
 /*********** Lazy Highcharts ***********/
 #some_id {

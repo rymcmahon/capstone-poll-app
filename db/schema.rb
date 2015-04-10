@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150409015218) do
+ActiveRecord::Schema.define(version: 20150410012625) do
 
   create_table "parties", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -28,7 +28,6 @@ ActiveRecord::Schema.define(version: 20150409015218) do
     t.decimal  "missed_votes_pct",                 precision: 5, scale: 2
     t.integer  "bills_sponsored",      limit: 4
     t.integer  "bills_cosponsored",    limit: 4
-    t.integer  "war_chest",            limit: 4
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "party_id",             limit: 4

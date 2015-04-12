@@ -1,6 +1,7 @@
 class Politician < ActiveRecord::Base
 	belongs_to :party
 
+
 	def score
 		return votes_with_party_pct_score + missed_votes_pct_score + dw_nominate_score + bills_sponsored_score + bills_cosponsored_score
 	end

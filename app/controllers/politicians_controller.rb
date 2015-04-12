@@ -17,6 +17,8 @@ class PoliticiansController < ApplicationController
 		@politicians = Politician.all
 		# respond_with(@politician)
 
+		Unirest.get("http://www.opensecrets.org/api/?method=candIndustry&cid=N00005195&cycle=2014&apikey=#{ENV[opensecrets_api_key]}")
+
 		@chart = LazyHighCharts::HighChart.new('graph') do |f|
 		  f.title(:text => "Top Campaign Donors")
 		  f.xAxis(:categories => ["NRA", "Exxon Mobile", "Teachers Union", "Comcast", "United Health"])

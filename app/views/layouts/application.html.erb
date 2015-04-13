@@ -36,7 +36,35 @@
               </div>
               <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-                  <li><a href="#methodology">Methodology</a></li>
+                <!-- Start modal trigger link -->
+                <li><a data-toggle="modal" data-target="#myModal" class="cursor-pointer">Methodology</a></li>
+                  <!-- Modal -->
+                  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                          <h4 class="modal-title" id="myModalLabel"><em>Power Pol</em> Methodology</h4>
+                        </div>
+                        <div class="modal-body">
+                         <p><em>Power Pol</em> uses a proprietary algorithm to measure each U.S. Senator's independence and productivity. The tool automatically ranks each senator based on how often they vote the party line, how often they miss votes, their DW NOMINATE score, the bills they sponsored, and bills they co-sponsored. The data is pulled from the <em>New York Times API.</em></p>
+ 
+                        <p><strong>Votes with Party Percentage:</strong> How often Senators vote with their parties. Senators who vote with their party less often receive a higher score for this category. The two Independent Senators caucus with the Democrats and they are considered part of the Democratic Party for the <em>Power Pol</em>.</p>
+                         
+                        <p><strong>DW NOMINATE:</strong> Developed by political scientists Keith T. Poole and Howard Rosenthal in the 1980s, DW NOMINATE rates each member of Congress on a scale from negative one (very liberal on economic issues) to positive one (very conservative) based on their roll-call votes. The closer a Democrat or Independent scores to negative one, the more ideological they are, thus hurting their independence score in the <em>Power Pol</em>. The same is true for Republicans who score close to positive one.</p>
+                         
+                        <p><strong>Missed Votes Percentage:</strong> The percentage of votes a Senator misses. Senators with fewer missed votes score higher in this category.</p>
+                         
+                        <p><strong>Bills Sponsored:</strong> Senators who sponsor the most bills earn the highest scores for this category.</p>
+                         
+                        <p><strong>Bills Co-Sponsored:</strong> Senators who co-sponsor the most bills earn the highest scores for this category.</p>
+                      </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                        </div><!-- end modal-footer -->
+                      </div><!-- end modal-content -->
+                    </div><!-- end modal-dialog -->
+                  </div><!-- end my modal -->
                   <li><a href="#about">About</a></li>
                   <ul class="nav navbar-nav navbar-right">
                     <% if current_user %>

@@ -84,7 +84,24 @@ footer p {
 	padding-left: 300px;
 }
 
-/*********** Lazy Highcharts ***********/
-#bar_graph {
+/*********** Show pages ***********/
 
+#show-header {
+	display: inline-block;
 }
+
+#show-score {
+	display: inline-block;
+	margin-left: 210px;
+}
+
+#show-score h2 {
+	font-size: 50px;
+	color: #B00200;
+	text-align: center;
+}
+
+
+/*********** Lazy Highcharts ***********/
+
+

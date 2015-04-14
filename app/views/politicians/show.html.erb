@@ -5,10 +5,24 @@
 			<h3><%= @politician.full_state_name %></h3>
 		</div><!-- end name-header-->
 </div><!-- end show-header-->
+<div class="panel panel-primary" id="show-score">
+  <div class="panel-heading">
+    <h3 class="panel-title">Current <em>Power Pol</em> Score:</h3>
+  </div>
+  <div class="panel-body">
+    <h2><%= @politician.score %></h2>
+  </div>
+</div>
+<!-- <div id="show-score">
+	<h1>Current <em>Power Pol</em> Score:</h1>
+	<h2><%= @politician.score %></h2>
+</div> -->
 
-<%= high_chart("bar_graph", @chart) %>
+<%= high_chart("bar_graph", @one_column) %>
 
- <%= high_chart("my_id4", @three_bar)  %>
+<%= high_chart("my_id4", @three_column)  %>
+
+<%= high_chart("my_id5", @three_bar)  %>
 
 <script>
 $( document ).ready(function() {

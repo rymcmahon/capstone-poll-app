@@ -1,15 +1,15 @@
 
 <div class="jumbotron">
-  <h1>How do your senators rank?</h1>
-  <p><em>Power Pol</em> is a real-time ranking system that uses a prorietary algorithm to determine which senators are the most independent and productive.</p>
-  <p><a class="btn btn-primary btn-lg">Latest Rankings &raquo;</a></p>
+  <h1 class="header-copy"><em>Power Pol</em></h1>
+  <h2 class="header-copy">How do your Senators rank?</h2>
+  <p class="header-copy"><em>Power Pol</em> uses a proprietary algorithm to measure each U.S. Senator's independence and productivity.</p>
 </div> <!-- end jumbotron  -->
 <h2 id="pol-title"><em>Power Pol</em> Rankings for <%= @date.strftime("%A %B %e, %Y")%></h2>
 <div ng-controller="politiciansCtrl" ng-init="fetchData()">
 	<table class="table table-hover">
 		<thead>
 			<tr>
-				<th>Rank</th>
+				<th></th>
 				<th>Name</th>
 				<th ng-click="changeOrder('score')" class="cursor-pointer pol-header">Pol Score
 					<span ng-show="orderByAttribute === 'score'">

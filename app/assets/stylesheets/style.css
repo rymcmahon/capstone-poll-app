@@ -73,6 +73,16 @@ footer p {
 	font-weight: 700;
 	color: #D90603;
 } 
+.jumbotron {
+	background: url(/assets/us-capitol-300.png) no-repeat left center;
+	height: 339px;
+	padding-top: 20px;
+	margin: 0 auto;
+}
+
+.header-copy {
+	padding-left: 300px;
+}
 
 /*********** Lazy Highcharts ***********/
 #bar_graph {

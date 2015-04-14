@@ -81,7 +81,7 @@
 
                     <datalist id="lastNames">
                     <select>
-                      <option ng-repeat="politician in politicians" value="{{ politician.last_name }}"> </option>
+                      <option ng-repeat="politician in politicians | orderBy: 'last_name'" value="{{ politician.last_name }}"> </option>
                     </select>
                     </datalist>
                     <button type="submit" class="btn btn-default" ng-click="goToByName(nameFilter)">Go</button>

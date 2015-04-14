@@ -37,14 +37,14 @@
               <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
                 <!-- Start modal trigger link -->
-                <li><a data-toggle="modal" data-target="#myModal" class="cursor-pointer">Methodology</a></li>
-                  <!-- Modal -->
-                  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <li><a data-toggle="modal" data-target="#methodologyModal" class="cursor-pointer">Methodology</a></li>
+                  <!-- Methodology Modal -->
+                  <div class="modal fade" id="methodologyModal" tabindex="-1" role="dialog" aria-labelledby="methodologyModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                       <div class="modal-content">
                         <div class="modal-header">
                           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                          <h4 class="modal-title" id="myModalLabel"><em>Power Pol</em> Methodology</h4>
+                          <h4 class="modal-title" id="methodologyModalLabel"><em>Power Pol</em> Methodology</h4>
                         </div>
                         <div class="modal-body">
                          <p><em>Power Pol</em> uses a proprietary algorithm to measure each U.S. Senator's independence and productivity. The tool automatically ranks each senator based on how often they vote the party line, how often they miss votes, their DW NOMINATE score, the bills they sponsored, and bills they co-sponsored. The data is pulled from the <em>New York Times API.</em></p>
@@ -61,11 +61,32 @@
                       </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-                        </div><!-- end modal-footer -->
-                      </div><!-- end modal-content -->
-                    </div><!-- end modal-dialog -->
-                  </div><!-- end my modal -->
-                  <li><a href="#about">About</a></li>
+                        </div><!-- end Methodology modal-footer -->
+                      </div><!-- end Methodology modal-content -->
+                    </div><!-- end Methodology modal-dialog -->
+                  </div><!-- end Methodology modal -->
+                  <li><a data-toggle="modal" data-target="#aboutModal" class="cursor-pointer">About</a></li>
+                   <!-- About Modal -->
+                  <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="aboutModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                          <h4 class="modal-title" id="aboutModalLabel">About this Project</h4>
+                        </div>
+                        <div class="modal-body">
+                         <p>The data for the <em>Power Pol</em> is collected from the <em>New York Times</em> Congress API. Data for the graphs on each Senator's individual page is collected from the Open Secrets API.</p>
+
+                         <p>The app is built with Ruby on Rails on the back-end and the front-end uses a lot of AngularJS. The <em>Power Pol</em> is also an API and the data is available via JSON or XML.</p>
+
+                         <p>This project is dedicated to the memory of my mom, Susan McMahon. Her spirit and all of the wonderful memories I have of her helped get me through the tough times during development. Love you, mom.</p>
+                         </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                        </div><!-- end About modal-footer -->
+                      </div><!-- end About modal-content -->
+                    </div><!-- end About modal-dialog -->
+                  </div><!-- end About modal -->
                   <ul class="nav navbar-nav navbar-right">
                     <% if current_user %>
                       <li><a href="/users/sign_out" data-method="delete" rel="nofollow">Sign Out</a></li>

@@ -1,7 +1,3 @@
-User.create!([
-  {email: "rymcmahon716@gmail.com", encrypted_password: "$2a$10$GxZjI3mH/dTeclUVkCKBJuOTICPVnP.tJoGYho5060LWeqSoS/oFe", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 2, current_sign_in_at: "2015-03-15 21:04:06", last_sign_in_at: "2015-03-15 20:58:31", current_sign_in_ip: "::1", last_sign_in_ip: "::1"},
-  {email: "jmzanieski@hotmail.com", encrypted_password: "$2a$10$F08ukJvbyuJeaGBe9zzTuOEiY/oc3YdVGsjp2Snkd43q.22WdoSde", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 1, current_sign_in_at: "2015-03-16 01:44:15", last_sign_in_at: "2015-03-16 01:44:15", current_sign_in_ip: "::1", last_sign_in_ip: "::1"}
-])
 Party.create!([
   {name: "D"},
   {name: "R"},

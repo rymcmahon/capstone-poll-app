@@ -29,8 +29,8 @@ test:
   socket: /tmp/mysql.sock
 
 production:
-  adapter: mysql2
-  encoding: utf8
+  adapter: postgresql
+  encoding: unicode
   reconnect: false
   database: poll-app-production
   pool: 5

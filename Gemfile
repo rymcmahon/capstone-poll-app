@@ -35,7 +35,8 @@ gem 'devise'
 gem 'lazy_high_charts'
 # Use Unicorn as the app server
 # gem 'unicorn'
-
+gem 'pg', group: :production
+gem 'rails_12factor', group: :production
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

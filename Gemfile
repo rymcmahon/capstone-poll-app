@@ -37,6 +37,7 @@ gem 'lazy_high_charts'
 # gem 'unicorn'
 gem 'pg', group: :production
 gem 'rails_12factor', group: :production
+gem 'seed_dump'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

@@ -51,9 +51,13 @@ footer p {
 	margin: 0 0 0 20px;
 }
 
-#pol-title {
+#pol-header {
+	margin: 80px 0 30px 0;
+}
+
+.pol-title {
 	text-align: center;
-	margin: 100px 0 30px 0;
+	margin: 0;
 }
 
 .table > tbody > tr > td {
@@ -76,7 +80,7 @@ footer p {
 .jumbotron {
 	background: url(/assets/us-capitol-300.png) no-repeat left center;
 	height: 339px;
-	padding-top: 20px;
+	width: 1020px;
 	margin: 0 auto;
 }
 

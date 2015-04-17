@@ -78,7 +78,7 @@ footer p {
 	color: #D90603;
 } 
 .jumbotron {
-	background: img-url(/assets/us-capitol-300.png) no-repeat left center;
+	background: url(image-path('/assets/us-capitol-300.png')) no-repeat left center;
 	height: 339px;
 	width: 1020px;
 	margin: 0 auto;

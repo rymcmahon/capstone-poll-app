@@ -14,14 +14,14 @@ class PoliticiansController < ApplicationController
 		@parties = Party.all
 		@politicians = Politician.all
 
-		politician_donors = Donor.find(@politician.cid)
+		@politician_donors = Donor.find(@politician.cid)
 		industry_names = []
 		donations = []
 		counter = 0
 
 		5.times do |counter|
-			industry_names << politician_donors.industries[counter]["@attributes"]["industry_name"]
-			donations << politician_donors.industries[counter]["@attributes"]["total"]
+			industry_names << @politician_donors.industries[counter]["@attributes"]["industry_name"]
+			donations << @politician_donors.industries[counter]["@attributes"]["total"]
 		end 
 
 		@one_column = LazyHighCharts::HighChart.new('graph') do |f|
@@ -39,10 +39,10 @@ class PoliticiansController < ApplicationController
 		counter = 0
 
 		5.times do |counter|
-		contributor_names << politician_donors.contributors[counter]["@attributes"]["org_name"]
-		individual_contributions << politician_donors.contributors[counter]["@attributes"]["indivs"]
-		pacs_contributions << politician_donors.contributors[counter]["@attributes"]["pacs"]
-		total_contributions << politician_donors.contributors[counter]["@attributes"]["total"]
+		contributor_names << @politician_donors.contributors[counter]["@attributes"]["org_name"]
+		individual_contributions << @politician_donors.contributors[counter]["@attributes"]["indivs"]
+		pacs_contributions << @politician_donors.contributors[counter]["@attributes"]["pacs"]
+		total_contributions << @politician_donors.contributors[counter]["@attributes"]["total"]
 		end
 
 		@three_column = LazyHighCharts::HighChart.new('graph') do |f|
@@ -57,9 +57,9 @@ class PoliticiansController < ApplicationController
 		spent = []
 		cash_on_hand = []
 
-		total << politician_donors.total["total"]
-		spent << politician_donors.total["spent"]
-		cash_on_hand << politician_donors.total["cash_on_hand"]
+		total << @politician_donors.total["total"]
+		spent << @politician_donors.total["spent"]
+		cash_on_hand << @politician_donors.total["cash_on_hand"]
 
 		@three_bar = LazyHighCharts::HighChart.new('graph') do |f|
 		  f.title({:text => "Senator's Financial Summary"})

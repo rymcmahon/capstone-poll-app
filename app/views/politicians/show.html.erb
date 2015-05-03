@@ -23,7 +23,7 @@
 <script>
 $( document ).ready(function() {
   $('img').error(function(){
-        $(this).attr('src', '/assets/profile_blank.png');
+        $(this).attr('src', '<%= image_path "profile_blank.png" %>');
 	});
 });
 	

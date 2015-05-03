@@ -55,7 +55,7 @@
 					
 					<tr ng-repeat="politician in politicians | orderBy: orderByAttribute:descending" ng-click="goTo(politician.id)" class="cursor-pointer">
 						<td> {{ $index + 1 }}</td>
-						<td><img src="http://theunitedstates.io/images/congress/225x275/{{politician.bio_guide}}.jpg" err-src='/assets/profile_blank.png' width="78.75px" height="96.25px" style="border-radius: 50%;"> {{ politician.first_name }} {{ politician.last_name }} ({{ politician.party }}) {{ politician.state }}</td>
+						<td><img src="http://theunitedstates.io/images/congress/225x275/{{politician.bio_guide}}.jpg" err-src='<%= image_path "profile_blank.png" %>' width="78.75px" height="96.25px" style="border-radius: 50%;"> {{ politician.first_name }} {{ politician.last_name }} ({{ politician.party }}) {{ politician.state }}</td>
 						<td id="pol-score">{{ politician.score }}</td>
 						<td>{{ politician.votes_with_party_pct }}%</td>
 						<td>{{ politician.dw_nominate }} </td>

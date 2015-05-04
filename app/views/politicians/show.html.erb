@@ -4,15 +4,15 @@
 			<h1><%= @politician.first_name %> <%= @politician.last_name %> (<%= @politician.party.name %>)</h1>
 			<h3><%= @politician.full_state_name %></h3>
 		</div><!-- end name-header-->
-</div><!-- end show-header-->
 <div class="panel panel-primary" id="show-score">
   <div class="panel-heading">
-    <h3 class="panel-title">Current <em>Power Pol</em> Score</h3>
+    <h3 class="panel-title"><em>Power Pol</em> Score</h3>
   </div>
   <div class="panel-body">
     <h2><%= @politician.score %></h2>
   </div>
 </div>
+</div><!-- end show-header-->
 
 <%= high_chart("bar_graph", @one_column) %>
 

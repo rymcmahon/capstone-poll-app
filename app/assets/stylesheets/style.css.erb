@@ -87,9 +87,8 @@ footer p {
 } 
 
 .jumbotron {
-	background: url('<%= asset_path("us-capitol-300.png") %>') no-repeat left center;
-	height: 339px;
-	width: 1020px;
+	/*background: url('<%= asset_path("us-capitol-300.png") %>') no-repeat left center;*/
+	max-width: 100%;
 	margin: 0 auto;
 }
 
@@ -97,9 +96,117 @@ footer p {
 	font-weight: 700;
 }
 
-.header-copy {
-	padding-left: 300px;
+#capitol-img {
+	display: inline-block;
+	vertical-align: top;
+  padding-top: 10px;
 }
+
+#jumbotron-copy {
+	display: inline-block;
+
+}
+
+/*********** 768px and up media query ***********/
+@media screen and (min-width: 768px) {
+	.jumbotron {
+	  padding: 0 !important;
+	}
+}
+
+/*********** Up to 700 media query ***********/
+@media screen and (max-width: 700px) {
+	#capitol-img img {
+	  max-width: 100%;
+	}
+
+	.jumbotron {
+	  padding-top: 0 !important;
+	}
+	
+	#jumbotron-copy {
+		text-align: center;
+	}
+
+	#jumbotron-copy h1 {
+		display: none;
+
+	}
+
+	#jumbotron-copy h2 {
+		font-size: 16px;
+	}
+
+	#jumbotron-copy p {
+		font-size: 12px;
+	}
+
+	#break {
+		display: none;
+	}
+
+	.pol-title {
+		font-size: 30px;
+	}
+
+	#pol-header {
+		margin-top: 30px;
+	}
+
+	#name-header h1 {
+		font-size: 34px;
+	}
+
+	#show-score {
+		margin: 10px 0 10px 67px !important;
+	}
+
+	#show-score h2 {
+		font-size: 32px !important;
+	}
+
+	.panel-body {
+  	padding: 5px !important;
+	}
+
+	#show-header img {
+	margin-left: 33px;
+	}
+}
+
+/*********** 768 to 991 media query ***********/
+@media screen and (min-width: 768px) and (max-width: 991px) {
+	#show-score {
+		margin-left: 31px !important;
+		width: 151px;
+	}
+
+	.panel-title {
+		font-size: 16px;
+		text-align: center;
+	}
+
+	#jumbotron-copy {
+  	display: inline-block;
+  	padding: 40px 16px 0 0px;
+	}
+
+	#jumbotron-copy h1{	
+  	font-size: 32px;
+ 	}
+
+ 	#jumbotron-copy h2 {	
+  	font-size: 20px;
+ 	}
+
+ 	#jumbotron-copy p {	
+  	font-size: 12px;
+ 	}
+}
+
+/*.header-copy {
+	padding-left: 300px;
+}*/
 
 /*********** Show pages ***********/
 

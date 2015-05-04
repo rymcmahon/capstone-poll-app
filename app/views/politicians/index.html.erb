@@ -1,70 +1,76 @@
 
 <div class="jumbotron">
-  <h1 class="header-copy"><em>Power Pol</em></h1>
-  <h2 class="header-copy">How do your Senators rank?</h2>
-  <p class="header-copy"><em>Power Pol</em> uses a proprietary algorithm to measure<br> each U.S. Senator's independence and productivity.</p>
+	<div id="capitol-img">
+		<%= image_tag "us-capitol-300.png" %>
+	</div>
+	<div id="jumbotron-copy">
+	  <h1 class=""><em>Power Pol</em></h1>
+	  <h2 class="">How do your Senators rank?</h2>
+	  <p class=""><em>Power Pol</em> uses a proprietary algorithm to measure<br id="break"> each U.S. Senator's independence and productivity.</p>
+  </div>
 </div> <!-- end jumbotron  -->
 <div id="pol-header">
 	<h1 class="pol-title"><em>Power Pol</em> Rankings</h1>
 	<h3 class="pol-title"><%= @date.strftime("%A %B %e, %Y")%></h3>
 </div>
 <div ng-controller="politiciansCtrl" ng-init="fetchData()">
-	<table class="table table-hover">
-		<thead>
-			<tr>
-				<th></th>
-				<th>Name</th>
-				<th ng-click="changeOrder('score')" class="cursor-pointer tbl-header">Pol Score
-					<span ng-show="orderByAttribute === 'score'">
-						<i ng-show="descending" class="glyphicon glyphicon-triangle-top"></i>
-						<i ng-show="!descending" class="glyphicon glyphicon-triangle-bottom"></i>	
-					</span>
-				</th>
-				<th ng-click="changeOrder('votes_with_party_pct')" class="cursor-pointer tbl-header">Votes With Party
-					<span ng-show="orderByAttribute === 'votes_with_party_pct'">
-						<i ng-show="descending" class="glyphicon glyphicon-triangle-top"></i>
-						<i ng-show="!descending" class="glyphicon glyphicon-triangle-bottom"></i>						
-					</span>
-				</th>
-				<th ng-click="changeOrder('dw_nominate')" class="cursor-pointer tbl-header">DW NOMINATE 
-					<span ng-show="orderByAttribute === 'dw_nominate'">
-						<i ng-show="descending" class="glyphicon glyphicon-triangle-top"></i>
-						<i ng-show="!descending" class="glyphicon glyphicon-triangle-bottom"></i>
-					</span>
-				</th>
-				<th ng-click="changeOrder('missed_votes_pct')" class="cursor-pointer tbl-header">Votes Missed 
-					<span ng-show="orderByAttribute === 'missed_votes_pct'">
-						<i ng-show="descending" class="glyphicon glyphicon-triangle-top"></i>
-						<i ng-show="!descending" class="glyphicon glyphicon-triangle-bottom"></i>
-					</span>
-				</th>
-				<th ng-click="changeOrder('bills_sponsored')" class="cursor-pointer tbl-header">Bills Sponsored 
-					<span ng-show="orderByAttribute === 'bills_sponsored'">
-						<i ng-show="descending" class="glyphicon glyphicon-triangle-top"></i>
-						<i ng-show="!descending" class="glyphicon glyphicon-triangle-bottom"></i>
-					</span>
-				</th>
-				<th ng-click="changeOrder('bills_cosponsored')" class="cursor-pointer tbl-header">Bills Cosponsored 
-					<span ng-show="orderByAttribute === 'bills_cosponsored'">
-						<i ng-show="descending" class="glyphicon glyphicon-triangle-top"></i>
-						<i ng-show="!descending" class="glyphicon glyphicon-triangle-bottom"></i>
-					</span>
-				</th>
-			</tr>
-		</thead>
-					
-					<tr ng-repeat="politician in politicians | orderBy: orderByAttribute:descending" ng-click="goTo(politician.id)" class="cursor-pointer">
-						<td> {{ $index + 1 }}</td>
-						<td><img src="http://theunitedstates.io/images/congress/225x275/{{politician.bio_guide}}.jpg" err-src='<%= image_path "profile_blank.png" %>' width="78.75px" height="96.25px" style="border-radius: 50%;"> {{ politician.first_name }} {{ politician.last_name }} ({{ politician.party }}) {{ politician.state }}</td>
-						<td id="pol-score">{{ politician.score }}</td>
-						<td>{{ politician.votes_with_party_pct }}%</td>
-						<td>{{ politician.dw_nominate }} </td>
-						<td>{{ politician.missed_votes_pct }}%</td>
-						<td>{{ politician.bills_sponsored }}</td>
-						<td>{{ politician.bills_cosponsored }}</td>
-					</tr>
-			
+	<div class="table-responsive">
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th></th>
+					<th>Name</th>
+					<th ng-click="changeOrder('score')" class="cursor-pointer tbl-header">Pol Score
+						<span ng-show="orderByAttribute === 'score'">
+							<i ng-show="descending" class="glyphicon glyphicon-triangle-top"></i>
+							<i ng-show="!descending" class="glyphicon glyphicon-triangle-bottom"></i>	
+						</span>
+					</th>
+					<th ng-click="changeOrder('votes_with_party_pct')" class="cursor-pointer tbl-header">Votes With Party
+						<span ng-show="orderByAttribute === 'votes_with_party_pct'">
+							<i ng-show="descending" class="glyphicon glyphicon-triangle-top"></i>
+							<i ng-show="!descending" class="glyphicon glyphicon-triangle-bottom"></i>						
+						</span>
+					</th>
+					<th ng-click="changeOrder('dw_nominate')" class="cursor-pointer tbl-header">DW NOMINATE 
+						<span ng-show="orderByAttribute === 'dw_nominate'">
+							<i ng-show="descending" class="glyphicon glyphicon-triangle-top"></i>
+							<i ng-show="!descending" class="glyphicon glyphicon-triangle-bottom"></i>
+						</span>
+					</th>
+					<th ng-click="changeOrder('missed_votes_pct')" class="cursor-pointer tbl-header">Votes Missed 
+						<span ng-show="orderByAttribute === 'missed_votes_pct'">
+							<i ng-show="descending" class="glyphicon glyphicon-triangle-top"></i>
+							<i ng-show="!descending" class="glyphicon glyphicon-triangle-bottom"></i>
+						</span>
+					</th>
+					<th ng-click="changeOrder('bills_sponsored')" class="cursor-pointer tbl-header">Bills Sponsored 
+						<span ng-show="orderByAttribute === 'bills_sponsored'">
+							<i ng-show="descending" class="glyphicon glyphicon-triangle-top"></i>
+							<i ng-show="!descending" class="glyphicon glyphicon-triangle-bottom"></i>
+						</span>
+					</th>
+					<th ng-click="changeOrder('bills_cosponsored')" class="cursor-pointer tbl-header">Bills Cosponsored 
+						<span ng-show="orderByAttribute === 'bills_cosponsored'">
+							<i ng-show="descending" class="glyphicon glyphicon-triangle-top"></i>
+							<i ng-show="!descending" class="glyphicon glyphicon-triangle-bottom"></i>
+						</span>
+					</th>
+				</tr>
+			</thead>
+						
+						<tr ng-repeat="politician in politicians | orderBy: orderByAttribute:descending" ng-click="goTo(politician.id)" class="cursor-pointer">
+							<td> {{ $index + 1 }}</td>
+							<td><img src="http://theunitedstates.io/images/congress/225x275/{{politician.bio_guide}}.jpg" err-src='<%= image_path "profile_blank.png" %>' width="78.75px" height="96.25px" style="border-radius: 50%;"> {{ politician.first_name }} {{ politician.last_name }} ({{ politician.party }}) {{ politician.state }}</td>
+							<td id="pol-score">{{ politician.score }}</td>
+							<td>{{ politician.votes_with_party_pct }}%</td>
+							<td>{{ politician.dw_nominate }} </td>
+							<td>{{ politician.missed_votes_pct }}%</td>
+							<td>{{ politician.bills_sponsored }}</td>
+							<td>{{ politician.bills_cosponsored }}</td>
+						</tr>
+				
 
-	</table>
-
+		</table>
+	</div>
 </div>

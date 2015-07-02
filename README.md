@@ -7,6 +7,9 @@ AngularJS is used onthe client-side to allow users to search for a Senator’s i
 
 [LazyHighCharts](https://github.com/michelson/lazy_high_charts) is used to display graphical representations of each Senator’s top contributors and the data for these charts is pulled from the [OpenSecrets API](https://www.opensecrets.org/resources/create/apis.php).
 
+## *Power Pol* in Action
+[*Power Pol*](http://www.powerpol.org/)
+
 ## Author
 
 Ryan McMahon

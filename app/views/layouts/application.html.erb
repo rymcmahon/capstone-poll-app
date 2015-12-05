@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "poll_app" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Power Pol" %></title>
     <%= csrf_meta_tags %>
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
@@ -87,14 +87,6 @@
                       </div><!-- end About modal-content -->
                     </div><!-- end About modal-dialog -->
                   </div><!-- end About modal -->
-                  <ul class="nav navbar-nav navbar-right">
-                    <% if current_user %>
-                      <li><a href="/users/sign_out" data-method="delete" rel="nofollow">Sign Out</a></li>
-                    <% else %> 
-                      <li><a href="/users/sign_up">Sign Up</a></li>
-                      <li><a href="/users/sign_in">Log In</a></li>
-                    <% end %>
-                  </ul>
                   <form class="navbar-form navbar-right" role="search">
                     <div class="form-group">
                       <input type="text" class="form-control" placeholder="Enter Last Name" ng-model="nameFilter" list="lastNames">

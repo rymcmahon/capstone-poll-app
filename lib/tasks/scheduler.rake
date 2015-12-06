@@ -2,7 +2,6 @@ desc "This task is called by the Heroku scheduler to call the NYT API"
 task :nyt_api_votes => :environment do
   politicians = Politician.all
 
-
 	request = Unirest.get("http://api.nytimes.com/svc/politics/v3/us/legislative/congress/114/senate/members/current.json?api-key=#{Figaro.env.nyt_api_key}").body
 
 		request["results"][0]["members"].each do |dw|
@@ -12,7 +11,7 @@ task :nyt_api_votes => :environment do
 			end
 		end
 end
-
+desc "This task is called by the Heroku scheduler to call the NYT API"
 task :nyt_api_bills => :environment do
   politicians = Politician.all
 
